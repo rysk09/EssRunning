@@ -1,7 +1,6 @@
 package servlet;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,22 +10,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import model.AccessData;
-import model.Data;
-import model.Input;
-import model.User;
-
 /**
- * Servlet implementation class Result
+ * Servlet implementation class Logout
  */
-@WebServlet("/Result")
-public class Result extends HttpServlet {
+@WebServlet("/Logout")
+public class Logout extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Result() {
+    public Logout() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -36,34 +30,12 @@ public class Result extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		
+		// response.getWriter().append("Served at: ").append(request.getContextPath());
 		HttpSession session = request.getSession();
-		User user = (User) session.getAttribute("loginUser");
-		// session.removeAttribute("health");
-		// forwardPath = "healthCheckResult.jsp";
-		
-		Input input = (Input) session.getAttribute("Input");
-		
-		String userId = user.getId();
-		double dist = 0;
-		if(request.getParameter("rslt") == null) {
-			input.setDist(0);
-		}
-		dist = input.getDist();
-		double totalDist = 0;
-		Data data = new Data(userId, dist);
-		
-		AccessData accessData = new AccessData();
-		accessData.postData(data);
-		List<Data> dataList = accessData.getData(userId);
-		totalDist = accessData.sumDist(userId);
-		input.setTotalDist(totalDist);
-		
-		request.setAttribute("dataList", dataList);
+		session.invalidate();
 		
 		RequestDispatcher dispatcher =
-				request.getRequestDispatcher("Result.jsp");
+				request.getRequestDispatcher("logout.jsp");
 		dispatcher.forward(request, response);
 	}
 

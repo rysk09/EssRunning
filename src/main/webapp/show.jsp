@@ -26,7 +26,7 @@
       
     <div class="tassei">
       <h1>東新宿ESSから<%= input.getLandmark() %>まで<%= input.getLandmarkDist() %>km</h1><br>  <!--ここにデータはいる-->
-      <a class="tassei-button" href="Result">達成</a>
+      <a class="tassei-button" href="Result?rslt=done">達成</a>
       <a class="tassei-button" href="Result">未達成</a>
     </div>
   </body>

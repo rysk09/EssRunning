@@ -27,12 +27,12 @@ body{
 </style>
 
 <headerclass="page-header">
-<h1> <a href="User.html"> <img class="logo" src="img/sport_jogging_man.png"/></a></h1>
+<h1> <a href="/essRunning/Main"> <img class="logo" src="img/sport_jogging_man.png"/></a></h1>
 <p class="header-text"><h1>ESS Running</h1></p>
 </header>
 <div class="result">
-<h1 class="distance">一日走った距離:<%= input.getDist() %>KM</h1><br><!--ここにデータはいる-->
-<h1 class="distance">総距離:<%= input.getDist() %>KM</h1>
+<h1 class="distance">一日走った距離:<%= input.getDist() %>km</h1><br><!--ここにデータはいる-->
+<h1 class="distance">総距離:<%= input.getTotalDist() %>km</h1>
 <h2 class="distance">今までの記録</h2>
 <% for(Data data : dataList) { %>
 <p><%= data.getDate() %>:<%= data.getUserId() %>:<%= data.getDist() %></p>

@@ -11,7 +11,7 @@
 <body>
 <!--<p><h1>ECC USER</h1></p>  -->
 <link rel="stylesheet" href="css/style.css" type="text/css">
-<div  id="logout" align="right"><button value="ログアウト" class="logout">ログアウト</button></div>
+<div  id="logout" align="right"><button value="ログアウト" class="logout" type=“button” onclick="location.href='/essRunning/Logout'">ログアウト</button></div>
 <header class="page-header">
 
 <img class="logo" src="img/sport_jogging_man.png" alt="ESS Running">
