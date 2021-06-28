@@ -7,7 +7,7 @@ import dao.GetLandmarkDAO;
 public class GetLandmark {
 	public void get(Input input) {
 		GetLandmarkDAO dao = new GetLandmarkDAO();
-		List<Landmark> landmarkList = dao.findByDist(input.getDist());
+		List<Landmark> landmarkList = dao.findByDist(Math.ceil(input.getDist()));
 		String landmark;
 		double landmarkDist;
 		/*
