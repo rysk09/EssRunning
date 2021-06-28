@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import model.CalcDist;
+import model.GetLandmark;
 import model.Input;
 
 /**
@@ -60,6 +61,9 @@ public class Main extends HttpServlet {
 		input.setWeight(weight);
 		input.setKcal(kcal);
 		input.setDist(dist);
+		GetLandmark getLandmark = new GetLandmark();
+		getLandmark.get(input);
+		System.out.println(input.getLandmark());
 		
 		// リクエストスコープに保存、フォワード遷移の場合のみ有効
 		// request.setAttribute("Input", input);

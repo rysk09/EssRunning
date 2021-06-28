@@ -10,6 +10,7 @@
 </head>
 <body>
 <p>適正距離:<%= input.getDist() %></p>
+<p>Landmark:<%= input.getLandmark() %></p>
 <a href="Result">達成</a>
 </body>
 </html>
