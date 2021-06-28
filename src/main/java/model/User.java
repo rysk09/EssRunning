@@ -1,13 +1,22 @@
 package model;
 
-import java.io.Serializable;
+import java.io.Serializable;;
 
 public class User implements Serializable {
-	private String userId;
-	private String pw;
+	private String id;
+	private String pass;
 	
-	public String getUserId() { return userId; }
-	public void setUserId(String userId) { this.userId = userId; }
-	public String getPw() { return pw; }
-	public void setPw(String pw) { this.pw = pw; }
+	public User() {}
+	public User(String id,String pass) {
+		this.id = id;
+		this.pass = pass;
+	}
+	public String getId() {
+		return id;
+	}
+	public String getPass() {
+		return pass;
+	}
 }
+//ユーザー情報に関するJavaBeans
+//情報を受け渡すためだけのファイル

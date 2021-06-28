@@ -14,6 +14,7 @@ import javax.servlet.http.HttpSession;
 import model.AccessData;
 import model.Data;
 import model.Input;
+import model.User;
 
 /**
  * Servlet implementation class Result
@@ -38,13 +39,13 @@ public class Result extends HttpServlet {
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		
 		HttpSession session = request.getSession();
-		// User user = (User) session.getAttribute("user");
+		User user = (User) session.getAttribute("loginUser");
 		// session.removeAttribute("health");
 		// forwardPath = "healthCheckResult.jsp";
 		
 		Input input = (Input) session.getAttribute("Input");
 		
-		String userId = "zzz";
+		String userId = user.getId();
 		double dist = input.getDist();
 		double distTotal = 0;
 		Data data = new Data(userId, dist);

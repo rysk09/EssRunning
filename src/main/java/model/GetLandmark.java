@@ -9,6 +9,7 @@ public class GetLandmark {
 		GetLandmarkDAO dao = new GetLandmarkDAO();
 		List<Landmark> landmarkList = dao.findByDist(input.getDist());
 		String landmark;
+		double landmarkDist;
 		/*
 		System.out.println(landmarkList.size());
 		for(Landmark l: landmarkList) {
@@ -17,9 +18,12 @@ public class GetLandmark {
 		*/
 		if(landmarkList.size() == 0) {
 			landmark = "Nothing!";
+			landmarkDist = 0;
 		} else {
 			landmark = landmarkList.get(0).getName();
+			landmarkDist = landmarkList.get(0).getDist();
 		}
 		input.setLandmark(landmark);
+		input.setLandmarkDist(landmarkDist);
 	}
 }

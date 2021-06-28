@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+/* 共通部分----------------------------------------*/
+html {
+    font-size: 100%;
+}
+body {
+    font-family: "Hiragino Maru Gothic ProN W4"、"ヒラギノ丸ゴ ProN W4";
+    background-color: #dbedf0;
+    }
+
+/* header -----------------------------------------*/
+.page-header {
+    display: flex;
+
+}
+.logo {
+    width: 40px;
+    margin-top: 14px;
+}
+.header-text {
+    font-family: "Philisopher", serif;
+    display: flex;
+    font-size: 2.5rem;
+    margin-top: 1.3rem;
+    margin-left: 1rem;
+    color: blue;
+}
+/* Running.html--------------------------------------*/
+.form-wrapper {
+    text-align: center;
+}
+.form-item {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 30px;
+}
+.button-panel {
+    font-size: 1rem;
+    width: 15%;
+    text-align: center;
+    background: #0bd;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px ;
+    margin-left: 550px;
+    margin-top: 50px;
+}
+.button-panel:hover {
+    background: #0090aa;
+}
+/* Data.html-------------------------------------------*/
+.tekisei {
+    text-align: center;
+    margin-top: 2rem;
+}
+.tassei {
+    text-align: center;
+    margin-top: 2rem;
+}
+.tassei-button {
+    font-size: 1rem;
+    width: 13%;
+    text-align: center;
+    background: #0bd;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px ;
+    margin-top: 10px;
+}
+.tassei-button:hover {
+    background: #0090aa;
+}
+
+/* logout.html----------------------------------------*/
+.logout {
+    text-align: center;
+    margin-top: 30px;
+}
+.reback-button {
+    font-size: 1rem;
+    width: 15%;
+    text-align: center;
+    background: #0bd;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px ;
+    margin-top: 100px;
+}
+.reback-button:hover {
+    background: #0090aa;
+}
+
