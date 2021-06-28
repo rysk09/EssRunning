@@ -8,8 +8,11 @@ public class AccessUser {
 		User user = dao.findByUserId(userId);
 		return user;
 	}
-	public void postUser(User user) {
+	public boolean postUser(User user) {
 		UserDAO dao = new UserDAO();
-		dao.create(user);
+		if(dao.create(user)) {
+			return true;
+		}
+		return false;
 	}
 }

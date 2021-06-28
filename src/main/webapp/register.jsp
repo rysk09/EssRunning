@@ -10,8 +10,8 @@
 </head>
 <body>
 <body>
-    <form action="/essRunning/Login" method="post" class="loginForm">
-      <h2>Login</h2>
+    <form action="/essRunning/Register" method="post" class="loginForm">
+      <h2>Sign up</h2>
       <div class="idForm">
         <input type="text" name = "id" class="id" placeholder="ID">
       </div>
@@ -21,15 +21,15 @@
       <!---  if(Login.times >1){  --->
       
       <button type="submit" class="btn" onclick="button()">
-        LOG IN
+        SIGN UP
       </button>
       <script>
       	let button = () => {
-        	alert('login Button !')
+        	alert('register Button !')
         }
       </script>
       <div class="bottomText">
-        Don't you have ID? <a href="/essRunning/register.jsp">sign up</a>
+        You have ID? <a href="/essRunning/index.jsp">log in</a>
       </div>
     </form>
   </body>
